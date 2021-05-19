@@ -1,0 +1,68 @@
+@import url(//db.onlinewebfonts.com/c/482de819aa9631d27141f3d998cace18?family=Ethnocentric);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: inline;
+    font-family: 'Ethnocentric', arial;
+    background-color: #1f2933;
+}
+
+.header{
+    width: 90%;
+    margin: 15px auto;
+    background-color: #334e68;
+}
+
+.welcome h1{
+    text-transform: uppercase;
+    font-family: 'Ethnocentric';
+    color: #1f2933;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.nav li{
+    width: 100%;
+    height: 80px;
+}
+
+.nav span{
+    display: none;
+    width: 100%;
+    height: 5px;
+    outline: none;
+    background-color: #9bcfff;
+    overflow: hidden;
+}
+
+.nav li a{
+    display: grid;
+    place-items: center;
+    color: #1f2933;
+    background-color: #1b7ddfa8;
+    text-decoration: none;
+    font-size: large;
+    height: 100%;
+}
+
+.nav li:hover a{
+    color: #fff;
+    background-color: #0080ff;
+}
+
+.nav li:hover span{
+    display: inline-block;
+}
