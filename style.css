@@ -42,14 +42,6 @@ body{
     fill: #fff;
 }
 
-#nav-btn{
-    display: inline-block;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    opacity: 1;
-}
-
 .welcome{
     width: fit-content;
     padding: 20px;
@@ -118,11 +110,8 @@ body{
         width: 100%;
         min-height: fit-content;
     }
-    #nav-btn{
+    #btn-svg{
         display: block;
-    }
-    #nav-btn input[type="checkbox"]:checked + svg{
-        background-color: #0080ff;
     }
     .welcome h1{
         font-size: x-large;
