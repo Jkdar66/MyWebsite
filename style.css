@@ -22,7 +22,7 @@ body{
     background-color: #334e68;
 }
 
-#nav-btn{
+#btn-svg {
     display: none;
     float: right;
     width: 100px;
@@ -32,25 +32,23 @@ body{
     cursor: pointer;
 }
 
-#nav-btn svg path{
+#btn-svg path{
     fill: #1f2933;
 }
-#nav-btn:hover{
+#btn-svg:hover{
     border: 1px dashed #0080ff;
 }
-#nav-btn:hover path{
+#btn-svg:hover path{
     fill: #fff;
 }
 
-#nav-btn input[type="checkbox"]{
+#nav-btn{
+    display: inline-block;
+    position: absolute;
     width: 100px;
     height: 100px;
-    position: absolute;
-    opacity: 0;
-}
-/* #nav-btn input[type="checkbox"]:checked{
     opacity: 1;
-} */
+}
 
 .welcome{
     width: fit-content;
@@ -69,7 +67,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    width: 80%;
+    width: 100%;
 }
 .nav li{
     width: 100%;
@@ -123,12 +121,8 @@ body{
     #nav-btn{
         display: block;
     }
-    #nav-btn input[type="checkbox"]:checked > #nav-btn path{
-        fill: red;
-    }
-    .ttt:first-child .ttt:last-child{
-        display: inline;
-        background-color: red;
+    #nav-btn input[type="checkbox"]:checked + svg{
+        background-color: #0080ff;
     }
     .welcome h1{
         font-size: x-large;
