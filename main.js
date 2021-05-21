@@ -1,4 +1,4 @@
-import { Viergewinnt } from "./Viergewinnt/viergewinnt.js";
+import { Viergewinnt } from "./Viergewinnt.js";
 
 var game;
 var navbar_btn = document.getElementById("btn-svg");
