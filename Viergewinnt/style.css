@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+canvas{
+    cursor: default;
+}
+
+img{
+    width: 1000px;
+    height: 837px;
+    margin: 100px;
+}
