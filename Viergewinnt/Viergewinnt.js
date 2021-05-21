@@ -8,6 +8,7 @@ export const Viergewinnt = function(parent){
     
     var cBounds = {x: 0, y: 0, w: 1000, h: 1000};
     var gBounds = {x: 0, y: 0, w: 800, h: 737};
+    var bounds;
     
     var game_over = false;
     var border;
@@ -48,8 +49,8 @@ export const Viergewinnt = function(parent){
             cBounds.w = sWidth - (sWidth * 0.05);
             cBounds.h = 83.7 * cBounds.w /100;
         }
-        cBounds.x = 0;
-        cBounds.y = 0;
+        cBounds.x = (sWidth - cBounds.w)/2;
+        cBounds.y = (sWidth - cBounds.w)/2;
     
         if(cBounds.h > sHeight){
             cBounds.w = sHeight;
@@ -58,7 +59,6 @@ export const Viergewinnt = function(parent){
     
         gBounds.w = cBounds.w;
         gBounds.h = getHeight();
-    
     
         posX = [getX(8.2), getX(22.4), getX(36.2), getX(50.2), getX(64.0), getX(78.0), getX(92.0)];
         posY = [getY(11.35), getY(26.88), getY(42.41), getY(57.94), getY(73.47), getY(89.00)];
@@ -89,7 +89,7 @@ export const Viergewinnt = function(parent){
         canvas.style.marginLeft = cBounds.x + "px";
         canvas.style.marginTop = cBounds.y + "px";
         ctx.fillStyle = "red";
-    
+        bounds = canvas.getBoundingClientRect()
         border = [];
         for (let x = 0; x < columns; x++) {
             border.push([]);
@@ -103,7 +103,7 @@ export const Viergewinnt = function(parent){
         canvas.addEventListener("mousedown", (e)=>{
             for (let x = 0; x < columns; x++) {
                 for (let y = 0; y < rows; y++) {
-                    if(ctx.isPointInPath(border[x][y], e.clientX - cBounds.x, e.clientY - cBounds.y)){
+                    if(ctx.isPointInPath(border[x][y], e.clientX - bounds.x, e.clientY - bounds.y)){
                         if(!game_over){
                             if(detectBorder() == 0){
                                 if(isArrived){
@@ -132,7 +132,7 @@ export const Viergewinnt = function(parent){
             if(detectBorder() == 0){
                 for (let x = 0; x < columns; x++) {
                     for (let y = 0; y < rows; y++) {
-                        if(ctx.isPointInPath(border[x][y], e.clientX - cBounds.x, e.clientY - cBounds.y)){
+                        if(ctx.isPointInPath(border[x][y], e.clientX - bounds.x, e.clientY - bounds.y)){
                             focus = true;
                             focusX = x;
                             focusY = getIndex(x);

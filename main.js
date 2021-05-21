@@ -3,8 +3,7 @@ import { Viergewinnt } from "./Viergewinnt/viergewinnt.js";
 var game;
 var navbar_btn = document.getElementById("btn-svg");
 var nav = document.getElementsByClassName("nav").item(0);
-var body = document.getElementById("content");
-console.log(body.clientWidth);
+var gameContainer = document.getElementById("game-container");
 
 navbar_btn.addEventListener("mousedown", (e)=>{
     if(!(nav.classList.contains("nav-animi"))){
@@ -30,8 +29,15 @@ for (let i = 0; i < btns.length; i++) {
         var str = href.substring(href.indexOf("#") + 1);
         console.log(str);
         switch(str){
+            case "Game":
+                if(gameContainer.children.length == 0){
+                    game = new Viergewinnt(gameContainer);
+                }
+                break;
             case "Game/Viergewinnt":
-                game = new Viergewinnt(body);
+                if(gameContainer.children.length == 0){
+                    game = new Viergewinnt(gameContainer);
+                }
                 break;
         }
     }

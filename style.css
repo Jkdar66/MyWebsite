@@ -23,13 +23,6 @@ body{
     background-color: #334e68;
 }
 
-#content{
-    width: 90%;
-    margin: 15px auto;
-    padding: 10px 0;
-    background-color: #334e68;
-}
-
 #btn-svg {
     display: none;
     float: right;
@@ -210,3 +203,20 @@ body{
         display: none;
     }
 }
+
+#content{
+    width: 90%;
+    height: fit-content;
+    min-height: 65%;
+    margin: 15px auto;
+    background-color: #334e68;
+}
+
+#footer{
+    width: 90%;
+    height: 15%;
+    min-height: fit-content;
+    margin: 15px auto;
+    background-color: #334e68;
+}
+
