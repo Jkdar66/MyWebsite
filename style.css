@@ -23,6 +23,13 @@ body{
     background-color: #334e68;
 }
 
+.content{
+    width: 90%;
+    margin: 15px auto;
+    padding: 10px 0;
+    background-color: #334e68;
+}
+
 #btn-svg {
     display: none;
     float: right;
